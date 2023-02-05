@@ -70,21 +70,19 @@ public class BookController {
     return ResponseEntity.ok(book);
   }
 
-  @PostMapping
-  public ResponseEntity<Book> createBook(@RequestBody Book book) {
 
-    // How do I return a String message "ii. Error message in the body. For example,
-    // 'Title can't be null'" ?
-    if (book.title() == null) {
-      return ResponseEntity.badRequest().body(null);
+  @PostMapping()
+  ResponseEntity<String> add(@RequestBody Book book) {
+    ResponseEntity<String> response;
+
+    try {
+      this.books.add(book);
+      response = new ResponseEntity<>("" + book.id(), HttpStatus.CREATED);
+    } catch (IllegalArgumentException e) {
+      response = new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
-    int newBookId = this.books.size() + 1;
-    Book newBook = new Book(newBookId, book.title(), book.year(), book.numberOfPages());
-
-    this.books.add(newBook);
-
-    return ResponseEntity.created(URI.create("/books/" + newBook.id())).body(newBook);
+    return response;
   }
 
   
