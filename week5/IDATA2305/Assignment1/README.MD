@@ -20,7 +20,7 @@ java -cp ./out SingleMain
 
 Observations:
 
-When we run multiple requests on the single threaded server, the request will run one at a time.''
+When we run multiple requests on the single threaded server, the request will run one at a time.
 But running at the multi threaded server, the requests are able to be processed concurrently.
 In general this allows for a faster application if multiple threads are used.
 
