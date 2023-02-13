@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html {
+  font-family: Roboto;
+}
+
+aside p {
+  color: darkgreen;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+h1,h2 {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#first-section > p {
+  text-decoration: underline;
+}
+
+.small {
+  font-variant: small-caps;
+}
+
+#comment {
+  background-color: lightblue;
+}
+
+li {
+  list-style-type: none;
+}
