@@ -5,8 +5,6 @@
 javac -sourcepath ./src -d ./out ./src/*.java
 ```
 
-2. 
-
 2. Run the main class
 ```bash
 java -cp ./out Main

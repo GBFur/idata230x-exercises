@@ -3,10 +3,12 @@ package booking;
 public class MovieTicketServer {
   private String movieName;
   private int availableSeats;
+  private boolean isSynchronized;
 
-  public MovieTicketServer(String movieName, int availableSeats) {
+  public MovieTicketServer(String movieName, int availableSeats, boolean isSynchronized) {
     this.availableSeats = availableSeats;
     this.movieName = movieName;
+    this.isSynchronized = isSynchronized;
   }
 
   /**
@@ -15,6 +17,14 @@ public class MovieTicketServer {
    * @param customerName
    * @param numberOfSeats
    */
+  public void bookTicket(String customerName, int numberOfSeats, boolean isSynchronized) {
+    if (isSynchronized) {
+      this.bookTicketSynchronized(customerName, numberOfSeats);
+    } else {
+      this.bookTicketUnsynchronized(customerName, numberOfSeats);
+    }
+  }
+
   public synchronized void bookTicketSynchronized(String customerName, int numberOfSeats) {
     this.bookTicketUnsynchronized(customerName, numberOfSeats);
   }
