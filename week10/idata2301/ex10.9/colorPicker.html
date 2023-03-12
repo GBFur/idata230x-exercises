@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>Color picker</title>
+  <style>
+    #color-example {
+      height: 500px;
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body onload="load()">
+  <main>
+    <p>Pick your color!</p>
+    <select name="color-picker" id="color-picker">
+      <option value="clear">Pick a color!</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="chuck">Roundhouse kick</option>
+    </select>
+
+    <p>
+      I see that your favorite color is <span id="favorite-color">...</span>
+    </p>
+
+    <div id="color-example"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
