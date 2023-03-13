@@ -1,0 +1,64 @@
+/* Put your styles here according to exercise description */
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.tag {
+  background-color: yellow;
+  position: absolute;
+  padding: 0.5rem 2rem;
+  width: 5rem;
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 2rem;
+}
+
+.card {
+  width: 25rem;
+  height: 40rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: 1px dashed gray;
+  box-shadow: 0px 0px 5px lightgray;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card.highlighted {
+  box-shadow: 0px 0px 20px 10px rgba(200, 200, 200, 0.55);
+}
+
+.card p,
+h2 {
+  margin: 10px;
+}
+
+.card:hover {
+  position: relative;
+  animation: example 0.2s forwards;
+}
+
+@keyframes example {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 10px;
+    box-shadow: 0px 0px 20px 10px rgba(200, 200, 200);
+  }
+}
