@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ex 9.3- Flexbox navigation</title>
+    <link rel="stylesheet" href="../../base-style.css" />
+    <link rel="stylesheet" href="starter-style.css" />
+  </head>
+  <style>
+
+    #menu-flexbox {
+      background-color: darkslategrey;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #menu-flexbox > li {
+      margin: 1rem;
+    }
+
+    /* Set a double margin for the last menu item so that it looks symmetric */
+    #menu-flexbox > li:last-child {
+      margin-right: 2rem;
+    }
+
+    #logo-image {
+      height: 2rem;
+      display: block;
+    }
+
+    nav li {
+      font-family: Arial, Helvetica, sans-serif;
+      list-style-type: none;
+    }
+
+
+    /* The logo says "hey, fill all the space on my right with a margin".
+    This effectively moves the logo to the left and all menu items to the right. */
+    li#logo-item {
+      margin-right: auto;
+    }
+
+  </style>
+  <body>
+    <main>
+
+      <p>The navigation bar should look like this:</p>
+      <img
+        src="img/reference_navigation.png"
+        alt="Navigation bar with NTNU logo, and three sections: Studies, Research, Administration"
+      />
+      
+      <hr></hr>
+
+      <nav>
+        <ul id="menu-flexbox">
+          <li id="logo-item">
+            <img src="img/ntnu_logo.png" alt="logo" id="logo-image" />
+          </li>
+          <li>Studies</li>
+          <li>Research</li>
+          <li>Administration</li>
+        </ul>
+      </nav>
+      
+    </main>
+  </body>
+</html>
